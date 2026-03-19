@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hisyam Fawwaz Abdussalam — Fullstack Developer & IoT Specialist based in Semarang. Building scalable web solutions with Laravel, Node.js, React and more.">
+<meta name="author" content="Hisyam Fawwaz Abdussalam">
+<title>Hisyam Fawwaz Abdussalam | Fullstack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="portoweb.css">
+
+</head>
+<body>
+<!-- Progress Bar -->
+<div id="progress-bar"></div>
+<!-- Custom Cursor -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">HFA<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="lang-btn" onclick="toggleLang()">ID</button>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme" id="themeBtn">🌙</button>
+    <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMobileMenu()">About</a>
+  <a href="#skills" onclick="closeMobileMenu()">Skills</a>
+  <a href="#experience" onclick="closeMobileMenu()">Experience</a>
+  <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<section id="hero">
+  <canvas id="particles-canvas"></canvas>
+  <div class="container hero-inner">
+    <div class="hero-text reveal">
+      <span class="hero-badge">"Engineering the future of connected systems"</span>
+      <p class="hero-greeting">Hello everyone, I'm</p>
+      <h1 class="hero-name">Hisyam<br>Fawwaz<br>Abdussalam</h1>
+      <p class="hero-sub"><strong>IoT & Automation Specialist</strong> | <strong> Full-Stack Developer.</strong> Engineering the future of connected systems.</p>
+      <div class="typing-wrap" id="typing-text"></div>
+      <div class="hero-btns">
+        <button class="btn-primary">📄 Download My Resume</button>
+        <button class="btn-outline">
+            <a href="#contact">Contact Me</a></button>
+      </div>
+    </div>
+    <div class="hero-photo-wrap reveal" style="transition-delay:0.2s">
+      <div class="hero-photo-card">
+        <div class="photo-placeholder">
+            <img src="images/Hisyamjas.png" alt="Foto Profil"/>
+        </div>
+        <div class="photo-glow"></div>
+      </div>
+      <div class="fullstack-badge">
+        <div class="dot"></div> Fullstack Dev
+      </div>
+      <div class="fullstack-badge">
+        <div class="dot"></div> Automation Engineer
+      </div>
+      <div class="fullstack-badge">
+        <div class="dot"></div> IoT Programmer
+      </div>
+      
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag">Personal Narrative</div>
+      <h2 class="section-title">Personal Narrative.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="reveal" style="transition-delay:0.1s">
+        <div class="about-location">Semarang, Indonesia</div>
+        <h3 class="about-headline">The Architect Behind the Logic</h3>
+        <p class="about-bio">
+          Hi, I'm <strong>Hisyam Fawwaz Abdussalam</strong>. Now, as a student at <strong>Politeknik Negeri Semarang</strong>, I bridge the gap between robust back-end logic and seamless user experience, as well as an attractive front-end.
+        </p>
+        <div class="tech-badges">
+          <span class="tech-badge">PHP</span>
+          <span class="tech-badge">Laravel</span>
+          <span class="tech-badge">Node.js</span>
+          <span class="tech-badge">React</span>
+          <span class="tech-badge">+ more tech stack</span>
+        </div>
+      </div>
+      <div class="about-cards reveal" style="transition-delay:0.2s">
+        <div class="about-card">
+          <div class="about-card-year">2024</div>
+          <div class="about-card-label">Active Freelance Career</div>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">🎓</div>
+          <div class="about-card-subtitle">4th Semester</div>
+          <div class="about-card-meta">POLITEKNIK NEGERI SEMARANG Student</div>
+        </div>
+      </div>
+    </div>
+    <div class="stats-bar reveal" style="transition-delay:0.3s">
+      <div class="stat-item">
+        <div class="stat-icon">💻</div>
+        <div class="stat-num" data-target="3">0</div>
+        <div class="stat-label">Projects</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">⚡</div>
+        <div class="stat-num" data-target="10">0</div>
+        <div class="stat-label">Tech Stack</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">🔗</div>
+        <div class="stat-num" data-target="15">0</div>
+        <div class="stat-label">Integrations</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">✅</div>
+        <div class="stat-num" data-target="100" data-suffix="%">0</div>
+        <div class="stat-label">Client Satisfaction</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills">
+  <div class="container">
+    <div class="skills-layout">
+      <div class="reveal">
+        <div class="section-tag">Tech Stack</div>
+        <h2 class="section-title">Tools &<br>Techstack.</h2>
+        <p class="skills-description">A curated selection of technologies I leverage to build robust, high-performance, and scalable digital solutions.</p>
+        <div class="filter-pills">
+          <button class="filter-pill active" data-filter="all">All</button>
+          <button class="filter-pill" data-filter="web">Web</button>
+          <button class="filter-pill" data-filter="back-end">Back-End</button>
+          <button class="filter-pill" data-filter="front-end">Front-End</button>
+          <button class="filter-pill" data-filter="database">Database</button>
+          <button class="filter-pill" data-filter="mobile">Mobile</button>
+          <button class="filter-pill" data-filter="tools">Tools</button>
+        </div>
+      </div>
+      <div class="skills-grid reveal" style="transition-delay:0.15s" id="skills-grid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EXPERIENCE ===================== -->
+<section id="experience">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag">Work History</div>
+      <h2 class="section-title">Experience.</h2>
+    </div>
+    <div class="timeline reveal" style="transition-delay:0.1s">
+      <div class="timeline-item">
+        <div class="timeline-date">2024 — PRESENT</div>
+        <div class="timeline-card">
+          <div class="timeline-role">Freelance Fullstack Developer</div>
+          <div class="timeline-company">Self-Employed · Remote</div>
+          <div class="timeline-desc">Delivering full-cycle web solutions for clients ranging from small businesses to startups and big company. Specializing in Laravel & Node.js back-end systems with seamless front-end integration using Tailwind CSS and Java Script.</div>
+          <div class="project-tags"><span class="project-tag">Laravel</span><span class="project-tag">Node.js</span><span class="project-tag">React</span><span class="project-tag">MySQL</span><span class="project-tag">Tailwind CSS</span><span class="project-tag">Java Script</span></div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2023 — 2024</div>
+        <div class="timeline-card">
+          <div class="timeline-role">Web Developer Intern</div>
+          <div class="timeline-company">SMK Rekayasa Perangkat Lunak · Tasikmalaya</div>
+          <div class="timeline-desc">Built and maintained internal school management systems. Developed RESTful APIs and contributed to front-end UI improvements using modern CSS frameworks.</div>
+          <div class="project-tags"><span class="project-tag">PHP</span><span class="project-tag">Bootstrap</span><span class="project-tag">MySQL</span><span class="project-tag">Git</span></div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2022 — 2023</div>
+        <div class="timeline-card">
+          <div class="timeline-role">Junior Developer — Academic Projects</div>
+          <div class="timeline-company">UNPER · Tasikmalaya</div>
+          <div class="timeline-desc">Worked on collaborative academic projects including a library management app and a student portal system. Deepened skills in database design and API architecture.</div>
+          <div class="project-tags"><span class="project-tag">Laravel</span><span class="project-tag">Tailwind</span><span class="project-tag">Supabase</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag">🚀 Portfolio</div>
+      <div class="projects-header">
+        <h2 class="section-title" style="margin-bottom:0">Selected Works.</h2>
+        <p class="projects-quote">"Architecting the future through IoT, Automation, and Fullstack systems"</p>
+      </div>
+    </div>
+    <!-- GitHub Heatmap -->
+    <div class="heatmap-container reveal" style="transition-delay:0.1s">
+      <div class="heatmap-header">
+        <div class="heatmap-title">
+          <span>&lt;/&gt;</span> GITHUB_ACTIVITY_LOG
+        </div>
+        <div class="live-badge"><div class="live-dot"></div> LIVE DATA</div>
+      </div>
+      <div class="heatmap-months" id="heatmap-months"></div>
+      <div class="heatmap-grid" id="heatmap-grid"></div>
+      <div class="heatmap-footer">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--text2)">77 contributions in the last year</span>
+        <div class="heatmap-legend">
+          Less
+          <div class="legend-cell" style="background:var(--bg3)"></div>
+          <div class="legend-cell l1"></div>
+          <div class="legend-cell l2"></div>
+          <div class="legend-cell l3"></div>
+          <div class="legend-cell l4"></div>
+          More
+        </div>
+      </div>
+    </div>
+    <!-- Project Cards -->
+    <div class="projects-grid reveal" style="transition-delay:0.15s">
+      <div class="project-card">
+        <div class="project-preview" style="background:linear-gradient(135deg,#1a0a2e,#3b1060)">🎵
+          <div class="project-overlay">
+            <button class="overlay-btn">🔗 Live Demo</button>
+            <button class="overlay-btn">📁 GitHub</button>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-name">Feeldrop</div>
+          <p class="project-desc">A mood-sharing social platform integrated with the Spotify API, allowing users to express emotions through curated music playlists.</p>
+          <div class="project-tags">
+            <span class="project-tag">Express.js</span>
+            <span class="project-tag">MongoDB</span>
+            <span class="project-tag">Tailwind CSS</span>
+            <span class="project-tag">Spotify API</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-preview" style="background:linear-gradient(135deg,#0a1a2e,#104060)">🧺
+          <div class="project-overlay">
+            <button class="overlay-btn">🔗 Live Demo</button>
+            <button class="overlay-btn">📁 GitHub</button>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-name">KilatCuci</div>
+          <p class="project-desc">A robust Laundry Management System featuring QR Code-based order tracking and automated customer notification workflows.</p>
+          <div class="project-tags">
+            <span class="project-tag">Laravel</span>
+            <span class="project-tag">Bootstrap</span>
+            <span class="project-tag">MySQL</span>
+            <span class="project-tag">Livewire</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-preview" style="background:linear-gradient(135deg,#0a2a1a,#105030)">🎮
+          <div class="project-overlay">
+            <button class="overlay-btn">🔗 Live Demo</button>
+            <button class="overlay-btn">📁 GitHub</button>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-name">PSKU App</div>
+          <p class="project-desc">An automated online booking platform for gaming centers, featuring secure payment processing via Midtrans Payment Gateway.</p>
+          <div class="project-tags">
+            <span class="project-tag">Laravel</span>
+            <span class="project-tag">Tailwind CSS</span>
+            <span class="project-tag">MySQL</span>
+            <span class="project-tag">Midtrans</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="view-more-wrap reveal" style="transition-delay:0.2s">
+      <button class="btn-github">
+        <img src= "images/linkin.png" width="3%" height="3%"/> More on Link IN ↗</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag">Get In Touch</div>
+      <h2 class="section-title">Let's Work<br>Together.</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal" style="transition-delay:0.1s">
+        <p class="contact-desc">Have a project in mind or want to collaborate? I'd love to hear from you. Let's build something amazing together.</p>
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📧</div>
+            <div>
+              <div class="contact-info-label">EMAIL</div>
+              <div class="contact-info-value">hisyamfawwaz01@gmail.com</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📍</div>
+            <div>
+              <div class="contact-info-label">LOCATION</div>
+              <div class="contact-info-value">Semarang, Indonesia</div>
+            </div>
+          </div>
+        </div>
+        <div class="available-badge">
+          <div class="dot" style="width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pulse-dot 2s infinite"></div>
+          Available for Freelance & Remote
+        </div>
+      </div>
+      <div class="reveal" style="transition-delay:0.2s">
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="field-wrap">
+              <label>Full Name</label>
+              <input type="text" id="fname" placeholder="John Doe">
+              <span class="field-error" id="fname-err"></span>
+            </div>
+            <div class="field-wrap">
+              <label>Email Address</label>
+              <input type="email" id="femail" placeholder="john@example.com">
+              <span class="field-error" id="femail-err"></span>
+            </div>
+          </div>
+          <div class="field-wrap">
+            <label>Subject</label>
+            <input type="text" id="fsubject" placeholder="Project Inquiry">
+            <span class="field-error" id="fsubject-err"></span>
+          </div>
+          <div class="field-wrap">
+            <label>Message</label>
+            <textarea id="fmessage" rows="5" placeholder="Tell me about your project..."></textarea>
+            <span class="field-error" id="fmessage-err"></span>
+          </div>
+          <button type="submit" class="btn-send" id="sendBtn">
+            Send Message →
+          </button>
+        </form>
+        <div class="form-success" id="formSuccess" style="display:none">
+          <div class="check-icon">✅</div>
+          <h3>Message Sent!</h3>
+          <p>Thank you for reaching out. I'll get back to you as soon as possible.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Hisyam Fawwaz Abdussalam<span style="color:var(--accent)">.</span></div>
+        <p class="footer-brand-desc">Web Developer focused on building scalable back-end systems with clean architecture. Always learning, always building.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Connect</div>
+        <div class="social-icons">
+          <a class="social-icon" title="GitHub" href="#">
+            <img class="social-img" src="images/github.png" alt="GitHub"/></a>
+          <a class="social-icon" title="LinkedIn" href="#">
+            <img class="social-img" src="images/linkin.png" alt="LinkedIn"/></a>
+          <a class="social-icon" title="Instagram" href="https://www.instagram.com/hisyamfawwaza">
+            <img class="social-img" src="images/instagram.png" alt="Instagram"/></a>
+          <a class="social-icon" title="Email" href="mailto:hisyamfawwaz01@gmail.com">
+            <img class="social-img" src="images/gmail.png" alt="Email"/></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Hisyam Fawwaz Abdusalam. All rights reserved.</span>
+      <span class="footer-made">Software & Automation Engineer</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop" title="Back to top">↑</button>
+
+<script src="portoweb.js"></script>
+</body>
+</html>
